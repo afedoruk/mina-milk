@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Mina Image gallery feature.
+ */
+
+include_once('mina_image_gallery.features.inc');

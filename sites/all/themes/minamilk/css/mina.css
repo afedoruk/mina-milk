@@ -1,0 +1,35 @@
+*, body
+{
+	font-size: 12px;
+}
+
+#block-menu-menu-menu-sections ul ul
+{
+	display: none;
+	padding: 0;
+	margin: 0; 
+}
+
+#block-menu-menu-menu-sections li
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.node-image h1
+{
+	display: inline;
+	font-weight: normal;
+}
+
+.node-image .descr
+{
+	font-style: italic;
+}
+/* carousel */
+
+.images-carousel .jcarousel-clip
+{
+	overflow: hidden;
+}
