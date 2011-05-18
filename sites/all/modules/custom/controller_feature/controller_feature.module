@@ -4,3 +4,4 @@
  */
 
 // Drupal needs this blank file.
+include("controller_feature.features.inc");

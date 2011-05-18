@@ -10,7 +10,7 @@
 function mina_image_gallery_taxonomy_default_vocabularies() {
   return array(
     'section' => array(
-      'name' => 'Раздел',
+      'name' => 'Sections',
       'machine_name' => 'section',
       'description' => '',
       'hierarchy' => '0',
