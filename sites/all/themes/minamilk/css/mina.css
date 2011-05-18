@@ -1,26 +1,52 @@
+html, body, #page, #page-wrapper
+{
+	height: 100%;
+}
+
 *, body
 {
-	font-size: 12px;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+a 
+{
+	text-decoration: none;
+	color: #333;
+}
+
+a.active, li a.active
+{
+	color: #c69;
+}
+
+#block-menu-menu-menu-sections ul
+{
+	padding: 0;
+	margin: 40px 0 0; 
 }
 
 #block-menu-menu-menu-sections ul ul
 {
 	display: none;
 	padding: 0;
-	margin: 0; 
+	margin: 15px 0; 
 }
 
-#block-menu-menu-menu-sections li
+#block-menu-menu-menu-sections li, #block-menu-menu-external-links li
 {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 15px 0;
 }
 
-.node-image h1
+body .node-image h1
 {
 	display: inline;
 	font-weight: normal;
+	font-style: normal;
 }
 
 .node-image .descr
@@ -32,4 +58,69 @@
 .images-carousel .jcarousel-clip
 {
 	overflow: hidden;
+}
+
+body.page-node.not-front #page
+{
+	background: url(../img/lemur.jpg) no-repeat bottom left;
+}
+
+body.front
+{
+	background: url(../img/fox.jpg) no-repeat bottom right;
+}
+
+@font-face {
+  font-family: Bell Gothic Std Black;
+  src: url(../fonts/bellgothicstd-black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Adobe Caslon Pro;
+  src: url(../fonts/Adobe Caslon Pro.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Adobe Caslon Pro;
+  src: url(../fonts/Adobe Caslon Pro Italic.otf) format("opentype");
+  font-style: italic;
+}
+ 
+ 
+body {
+  font-family: Adobe Caslon Pro, sans-serif; 
+  font-style: italic;
+}
+
+#first-section
+{
+	padding-top: 50px;
+}
+
+#carousel-scroll
+{
+	float: right;
+}
+
+.vertical
+{
+	position: relative;
+}
+
+
+.vertical div.description
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.vertical img
+{
+	margin-right: 40px;
+}
+
+.horizontal img
+{
+	margin-bottom: 15px;
 }

@@ -57,20 +57,21 @@ hr,
 #content {
   width: 100%;
   margin-right: -100%;
+  padding-top: 50px;
 }
 .sidebar-first #content .section {
-  padding-left: 200px;   /* LC width */
+  padding-left: 160px;   /* LC width */
 }
 .sidebar-second #content .section {
   padding-right: 160px;  /* RC width */
 }
 .two-sidebars #content .section {
-  padding-left: 200px;   /* LC width */
+  padding-left: 160px;   /* LC width */
   padding-right: 160px;  /* RC width */
 }
 #sidebar-first {
-  width: 200px;          /* LC width */
-  margin-right: -200px;
+  width: 160px;          /* LC width */
+  margin-right: -160px;
 }
 #sidebar-second {
   float: right;

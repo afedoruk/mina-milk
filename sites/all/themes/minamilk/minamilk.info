@@ -13,6 +13,7 @@ engine = phptemplate
 
 stylesheets[screen][] = css/layout.css
 stylesheets[screen][] = css/mina.css
+stylesheets[screen][] = css/skin.css
 
 scripts[]=js/mina.js
 scripts[]=js/jquery.jcarousel.min.js

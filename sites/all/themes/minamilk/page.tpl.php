@@ -93,7 +93,8 @@
     <?php endif; ?>
 
     <?php if ($page['sidebar_first']): ?>
-      <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section">
+      <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section"  id="first-section">
+	  <a href='/'>mina-milk</a>
         <?php print render($page['sidebar_first']); ?>
       </div></aside> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
