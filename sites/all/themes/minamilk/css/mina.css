@@ -45,8 +45,7 @@ a.active, li a.active
 body .node-image h1
 {
 	display: inline;
-	font-weight: normal;
-	font-style: normal;
+	font-family: AdobeCaslonProRegular, sans-serif; 
 }
 
 .node-image .descr
@@ -71,24 +70,31 @@ body.front
 }
 
 @font-face {
-  font-family: Bell Gothic Std Black;
-  src: url(../fonts/bellgothicstd-black.otf) format("opentype");
+    font-family: 'AdobeCaslonProItalic';
+    src: url('../fonts/adobe_caslon_pro_italic-webfont.eot');
+    src: url('../fonts/adobe_caslon_pro_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/adobe_caslon_pro_italic-webfont.woff') format('woff'),
+         url('../fonts/adobe_caslon_pro_italic-webfont.ttf') format('truetype'),
+         url('../fonts/adobe_caslon_pro_italic-webfont.svg#AdobeCaslonProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-  font-family: Adobe Caslon Pro;
-  src: url(../fonts/Adobe Caslon Pro.otf) format("opentype");
-}
+    font-family: 'AdobeCaslonProRegular';
+    src: url('../fonts/adobe_caslon_pro-webfont.eot');
+    src: url('../fonts/adobe_caslon_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/adobe_caslon_pro-webfont.woff') format('woff'),
+         url('../fonts/adobe_caslon_pro-webfont.ttf') format('truetype'),
+         url('../fonts/adobe_caslon_pro-webfont.svg#AdobeCaslonProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face {
-  font-family: Adobe Caslon Pro;
-  src: url(../fonts/Adobe Caslon Pro Italic.otf) format("opentype");
-  font-style: italic;
 }
- 
  
 body {
-  font-family: Adobe Caslon Pro, sans-serif; 
+  font-family: AdobeCaslonProItalic, sans-serif; 
   font-style: italic;
 }
 
