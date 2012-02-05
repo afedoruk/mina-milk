@@ -1,5 +1,4 @@
 <?php
-// $Id: taxonomy_menu.module,v 1.23.2.5 2011/01/15 00:11:21 dstol Exp $
 
 /**
  * @file
@@ -410,7 +409,7 @@ function taxonomy_menu_node_presave($node) {
 function taxonomy_menu_node_delete($node) {
   //since the delete operation is run after the data is deleted
   //pull the terms from the node object
-  $terms = array_keys($node->taxonomy);
+  $terms =  _taxonomy_menu_get_node_terms($node);
   _taxonomy_menu_nodeapi_helper('delete', $terms, $node);
 }
 
@@ -479,6 +478,7 @@ function _taxonomy_menu_nodeapi_helper($op, $terms = array(), $node) {
     }
   }
 }
+
 /**
  * HANDLING
  *
@@ -740,8 +740,8 @@ function taxonomy_menu_taxonomy_menu_delete(&$item) {
 function _taxonomy_menu_create_item($args = array(), $node) {
 
   //if tid = 0 then we are creating a vocab item
-  if ($args['tid'] == 0 && variable_get('taxonomy_menu_voc_item_'. $args['vid'], 0)) {
 
+  if (@$args['tid'] == 0 && variable_get('taxonomy_menu_voc_item_'. @$args['vid'], 0)) {
     $vocab = taxonomy_vocabulary_load($args['vid']);
     $item = array(
       'tid' => 0,
@@ -788,7 +788,7 @@ function _taxonomy_menu_create_item($args = array(), $node) {
     'language' => $node ? $node->language : $GLOBALS['language']->language,
   );
 
-  if ($args['mlid']) {
+  if (isset($args['mlid'])) {
     $item['mlid'] = $args['mlid'];
   }
 
@@ -803,7 +803,7 @@ function _taxonomy_menu_create_item($args = array(), $node) {
  * @param $tid
  * @param $vid
  * @return boolean
- *
+ */
 function _taxonomy_menu_children_has_nodes($tid, $vid) {
   $children = taxonomy_get_children($tid, $vid);
   foreach ($children as $tid => $term) {
@@ -812,7 +812,7 @@ function _taxonomy_menu_children_has_nodes($tid, $vid) {
     }
   }
   return TRUE;
-}*/
+}
 
 /**
  * Helper function for insert and update hooks
@@ -824,19 +824,19 @@ function _taxonomy_menu_item($item) {
   if ($item['tid'] > 0) {
     //get the number of node attached to this term
     // @TODO Needs Updating
-    //$num = _taxonomy_menu_term_count($item['tid']);
+    $num = _taxonomy_menu_term_count($item['tid']);
 
     //if hide menu is selected and the term count is 0 and the term has no children then do not create the menu item
     // @TODO Needs updating
-    /*
+    
     if ($num == 0 &&
-        variable_get('taxonomy_menu_hide_empty_terms_' . $item['vid'], FALSE) &&
+        variable_get('taxonomy_menu_hide_empty_terms_' . $item['vid'], TRUE) &&
         _taxonomy_menu_children_has_nodes($item['tid'], $item['vid'])) {
 
         $item['remove'] = TRUE;
         return $item;
     }
-
+	/*
     //if display number is selected and $num > 0 then change the title
     if (variable_get('taxonomy_menu_display_num_' . $item['vid'], FALSE)) {
       //if number > 0 and display decendants, then count all of the children

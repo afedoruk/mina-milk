@@ -1,6 +1,5 @@
 <?php
 
-// $Id: taxonomy_menu.database.inc,v 1.3.2.2 2010/12/23 15:40:54 dstol Exp $
 
 /**
  * @file
@@ -158,6 +157,10 @@ function _taxonomy_menu_get_terms($vid) {
   $result->execute();
   return $result->fetchField();
 }*/
+
+function _taxonomy_menu_term_count($tid) {
+	return db_query('SELECT COUNT(n.nid) AS c FROM {taxonomy_index} t INNER JOIN {node} n ON t.nid = n.nid WHERE n.status = 1 AND t.tid = ' . $tid)->fetchField();
+}
 
 /**
  * Get tid for a given mlid
