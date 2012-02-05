@@ -1,74 +1,3 @@
-html, body, #page, #page-wrapper
-{
-	height: 100%;
-}
-
-*, body
-{
-	font-size: 14px;
-	color: #333;
-	margin: 0;
-	padding: 0;
-}
-
-a 
-{
-	text-decoration: none;
-	color: #333;
-}
-
-a.active, li a.active
-{
-	color: #c69;
-}
-
-#block-menu-menu-menu-sections ul
-{
-	padding: 0;
-	margin: 40px 0 0; 
-}
-
-#block-menu-menu-menu-sections ul ul
-{
-	display: none;
-	padding: 0;
-	margin: 15px 0; 
-}
-
-#block-menu-menu-menu-sections li, #block-menu-menu-external-links li
-{
-	list-style: none;
-	padding: 0;
-	margin: 0 0 15px 0;
-}
-
-body .node-image h1
-{
-	display: inline;
-	font-family: AdobeCaslonProRegular, sans-serif; 
-}
-
-.node-image .descr
-{
-	font-style: italic;
-}
-/* carousel */
-
-.images-carousel .jcarousel-clip
-{
-	overflow: hidden;
-}
-
-body.page-node.not-front #page
-{
-	background: url(../img/lemur.jpg) no-repeat bottom left;
-}
-
-body.front
-{
-	background: url(../img/fox.jpg) no-repeat bottom right;
-}
-
 @font-face {
     font-family: 'AdobeCaslonProItalic';
     src: url('../fonts/adobe_caslon_pro_italic-webfont.eot');
@@ -92,10 +21,89 @@ body.front
     font-style: normal;
 
 }
- 
-body {
-  font-family: AdobeCaslonProItalic, sans-serif; 
-  font-style: italic;
+
+html, body, #page, #page-wrapper
+{
+	height: 100%;
+}
+
+*, body
+{
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-size: 14px;
+	font-family: AdobeCaslonProItalic, sans-serif; 
+}
+
+a 
+{
+	text-decoration: none;
+	color: #333;
+}
+
+a.active, li a.active
+{
+	color: #c69;
+
+}
+
+#block-menu-menu-menu-sections ul
+{
+	padding: 0;
+	margin: 40px 0 0;
+}
+
+#block-menu-menu-menu-sections ul ul
+{
+	display: none;
+	padding: 0;
+	margin: 15px 0; 
+}
+
+#block-menu-menu-menu-sections li, #block-menu-menu-external-links li
+{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 15px 0;
+	font-size: 16px;
+}
+
+#block-menu-menu-menu-sections li li, #block-menu-menu-external-links li li
+{
+	font-size: 14px;
+}
+
+body .node-image h1
+{
+	font-family: AdobeCaslonProRegular, sans-serif; 
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.node-image .descr
+{
+	font-style: italic;
+}
+/* carousel */
+
+.images-carousel .jcarousel-clip
+{
+	overflow: hidden;
+}
+
+body.page-node.not-front #page
+{
+	background: url(../img/lemur.jpg) no-repeat bottom left;
+}
+
+body.front
+{
+	background: url(../img/fox.jpg) no-repeat bottom right;
 }
 
 #first-section

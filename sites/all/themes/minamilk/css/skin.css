@@ -30,7 +30,7 @@
 
 /**
  *  Horizontal Buttons
- */
+ **/
 .images-carousel .jcarousel-next-horizontal {
     background-image: url(../img/right.gif);
 	margin: 0 0 0 15px;
@@ -81,4 +81,3 @@
     cursor: default;
 	background-image: url(../img/left-dis.gif);
 }
-
