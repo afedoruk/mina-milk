@@ -69,13 +69,16 @@ a.active, li a.active
 {
 	list-style: none;
 	padding: 0;
-	margin: 0 0 15px 0;
+	margin: 15px 0 0 0;
 	font-size: 16px;
 }
 
 #block-menu-menu-menu-sections li li, #block-menu-menu-external-links li li
 {
 	font-size: 14px;
+	font-style: normal;
+	margin: 0;
+	font-family: AdobeCaslonProRegular, sans-serif;
 }
 
 body .node-image h1
@@ -83,11 +86,13 @@ body .node-image h1
 	font-family: AdobeCaslonProRegular, sans-serif; 
 	font-size: 14px;
 	font-weight: normal;
+	font-style: italic;
 }
 
 .node-image .descr
 {
-	font-style: italic;
+	font-style: normal;
+	font-family: AdobeCaslonProRegular, sans-serif;
 }
 /* carousel */
 
